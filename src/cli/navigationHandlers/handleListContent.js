@@ -13,18 +13,23 @@ export async function handleListContent() {
 
 		files.forEach(element => {
 			if (element.isFile()) {
-				regularFiles.push(element);
+				regularFiles.push({
+					Name: element.name,
+					Type: 'file',
+				});
 			} else if (element.isDirectory()) {
-				directories.push(element);
+				directories.push({
+					Name: element.name,
+					Type: 'directory',
+				});
 			}
 		});
-		directories.sort((a, b) => a.name.localeCompare(b.name));
-		regularFiles.sort((a, b) => a.name.localeCompare(b.name));
 
-		const result = [...directories, ...regularFiles].map(file => ({
-			Name: file.name,
-			Type: file.isFile() ? 'file' : 'directory',
-		}));
+		directories.sort((a, b) => a.Name.localeCompare(b.Name));
+		regularFiles.sort((a, b) => a.Name.localeCompare(b.Name));
+
+		const result = [...directories, ...regularFiles];
+
 		console.table(result);
 	} catch (err) {
 		printErrorToConsole(err);
