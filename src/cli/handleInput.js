@@ -1,6 +1,7 @@
 import { WRONG_COMMAND } from '../consts/errorMessages.js';
-import { EXIT, NAVIGATION } from '../consts/operationTypes.js';
+import { EXIT, FS_OPERATIONS, NAVIGATION } from '../consts/operationTypes.js';
 import { printErrorToConsole } from '../utils/printErrorToConsole.js';
+import fsOperationsHandler from './fsOperationsHandlers/fsOperationsHandler.js';
 import navigationHandler from './navigationHandlers/navigationHandler.js';
 
 export default async function handleInput(input, fn) {
@@ -14,8 +15,13 @@ export default async function handleInput(input, fn) {
 			case NAVIGATION[operationType]:
 				navigationHandler(operationType, args);
 				break;
+			case FS_OPERATIONS[operationType]:
+				await fsOperationsHandler(operationType, args);
+				break;
 			default:
 				printErrorToConsole(WRONG_COMMAND);
 		}
-	} catch (err) {}
+	} catch (err) {
+		printErrorToConsole(err);
+	}
 }

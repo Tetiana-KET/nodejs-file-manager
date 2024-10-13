@@ -1,0 +1,1 @@
+ +10 Read file and print it's content in console ✔️
