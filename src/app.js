@@ -20,7 +20,6 @@ export default function app() {
 
 	rl.on('line', async line => {
 		await handleInput(line, closeRL);
-		printCurrentWorkingDir();
 	});
 
 	rl.on('close', () => {

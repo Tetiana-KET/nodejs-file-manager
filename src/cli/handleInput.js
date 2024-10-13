@@ -1,5 +1,7 @@
-import { COLORS } from '../consts/colors.js';
-import { EXIT } from '../consts/operationTypes.js';
+import { WRONG_COMMAND } from '../consts/errorMessages.js';
+import { EXIT, NAVIGATION } from '../consts/operationTypes.js';
+import { printErrorToConsole } from '../utils/printErrorToConsole.js';
+import navigationHandler from './navigationHandlers/navigationHandler.js';
 
 export default async function handleInput(input, fn) {
 	const [operationType, ...args] = input.trim().split(/\s+/g);
@@ -9,10 +11,11 @@ export default async function handleInput(input, fn) {
 			case EXIT:
 				fn();
 				break;
+			case NAVIGATION[operationType]:
+				navigationHandler(operationType, args);
+				break;
 			default:
-				console.log(
-					`${COLORS.error}Operation failed! Please check your input. You have used wrong command.\n${COLORS.reset}`
-				);
+				printErrorToConsole(WRONG_COMMAND);
 		}
 	} catch (err) {}
 }
