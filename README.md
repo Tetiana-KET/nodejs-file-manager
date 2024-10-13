@@ -36,48 +36,77 @@ To run it, use 22.x.x version (22.9.0 or upper) of Node.js
 - Go upper from current directory (when you are in the root folder this operation won't change working directory)
   `up`
 - Go to dedicated folder from current directory (path_to_directory can be relative or absolute)
+
   `cd path_to_directory`
+
 - Print in console list of all files and folders in current directory.
+
   `ls`
+
   Example of how ls command output may look like
+
   ![Example of how ls command output may look like](image.png)
 
 ### Basic files operations
 
 - Read file and print it's content in console (is done using Readable stream):
+
   `cat path_to_file`
+
 - Create empty file in current working directory:
+
   `add new_file_name`
+
 - Rename file (content should remain unchanged):
+
   `rn path_to_file new_filename`
+
 - Copy file (should be done using Readable and Writable streams):
-  cp path_to_file path_to_new_directory
+
+  `cp path_to_file path_to_new_directory`
+
 - Move file (same as copy but initial file is deleted, copying part should be done using Readable and Writable streams):
+
   `mv path_to_file path_to_new_directory`
+
 - Delete file:
+
   `rm path_to_file`
 
 ### Basic OS operations (prints following information in console)
 
 - Get EOL (default system End-Of-Line) and print it to console
+
   `os --EOL`
+
 - Get host machine CPUs info (overall amount of CPUS plus model and clock rate (in GHz) for each of them) and print it to console
+
   `os --cpus`
+
 - Get home directory and print it to console
+
   `os --homedir`
+
 - Get current system user name (Do not confuse with the username that is set when the application starts) and print it to console
+
   `os --username`
+
 - Get CPU architecture for which Node.js binary has compiled and print it to console
+
   `os --architecture`
 
 ### Hash calculation
 
 - Calculate hash for file and print it into console
+
   `hash path_to_file`
 
 ### Compress and decompress operations
 
 - Compress file (using Brotli algorithm)
+
   `compress path_to_file path_to_destination`
+
 - Decompress file (using Brotli algorithm)
+
   `decompress path_to_file path_to_destination`
