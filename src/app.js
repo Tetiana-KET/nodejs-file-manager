@@ -17,6 +17,7 @@ export default function app() {
 	function closeRL() {
 		rl.close();
 	}
+
 	rl.on('line', async line => {
 		await handleInput(line, closeRL);
 		printCurrentWorkingDir();
@@ -24,8 +25,9 @@ export default function app() {
 
 	rl.on('close', () => {
 		console.log(
-			`${COLORS.info}Thank you for using File Manager, ${userName}, goodbye!\n${COLORS.reset}`
+			`${COLORS.success}Thank you for using File Manager, ${userName}, goodbye!\n${COLORS.reset}`
 		);
+		printCurrentWorkingDir();
 	});
 
 	rl.on('error', () => {
