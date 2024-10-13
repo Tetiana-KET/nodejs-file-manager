@@ -1,14 +1,13 @@
 import path from 'path';
-import { homedir } from 'os';
 import { UP_ERROR, UP_INFO } from '../../consts/errorMessages.js';
 import { printErrorToConsole } from '../../utils/printErrorToConsole.js';
 import printCurrentWorkingDir from '../../utils/printCurrentWorkingDir.js';
+import { ROOT_FOLDER } from '../../consts/rootDirectory.js';
 
 export function handleMoveUp() {
 	const curDir = process.cwd();
-	const rootDir = homedir();
 	const parentDir = path.dirname(curDir);
-	if (rootDir !== curDir) {
+	if (ROOT_FOLDER !== curDir) {
 		try {
 			process.chdir(parentDir);
 			printCurrentWorkingDir();
