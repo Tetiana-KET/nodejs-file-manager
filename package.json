@@ -1,0 +1,24 @@
+{
+	"name": "nodejs-file-manager",
+	"version": "1.0.0",
+	"description": "File Manager app implemented during RS School Nodejs course using pure Node.js APIs",
+	"main": "index.js",
+	"type": "module",
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"scripts": {
+		"start": "node index.js --",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Tetiana-KET/nodejs-file-manager.git"
+	},
+	"author": "Tatiana Bezkorovaina",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Tetiana-KET/nodejs-file-manager/issues"
+	},
+	"homepage": "https://github.com/Tetiana-KET/nodejs-file-manager#readme"
+}

@@ -1,0 +1,5 @@
+Compress file (using Brotli algorithm, should be done using Streams API)
+**```compress src/files/fileToCompress.txt src/files```**
+
+Decompress file (using Brotli algorithm, should be done using Streams API)
+**```decompress src/files/compressedFile.br src/files```**

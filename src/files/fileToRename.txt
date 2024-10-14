@@ -1,0 +1,1 @@
+Rename file (content should remain unchanged). Use ```rn src/files/fileToRename.txt newFilename.txt```

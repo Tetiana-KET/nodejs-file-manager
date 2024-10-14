@@ -1,0 +1,1 @@
+Copy file (should be done using Readable and Writable streams): cp src/files/fileToCopy.txt files_newDirectory
