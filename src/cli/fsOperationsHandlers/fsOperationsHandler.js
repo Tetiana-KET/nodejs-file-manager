@@ -1,5 +1,6 @@
 import { WRONG_COMMAND } from '../../consts/errorMessages.js';
 import { printErrorToConsole } from '../../utils/printErrorToConsole.js';
+import { createFile } from './createEmptyFile.js';
 import { readFile } from './readFile.js';
 
 export default async function fsOperationsHandler(operation, args) {
@@ -8,8 +9,9 @@ export default async function fsOperationsHandler(operation, args) {
 			case 'cat':
 				await readFile(args[0]);
 				break;
-			// case 'add':
-			// 	break;
+			case 'add':
+				await createFile(args[0]);
+				break;
 			// case 'rn':
 			// 	break;
 			// case 'cp':

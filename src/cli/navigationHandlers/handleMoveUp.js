@@ -1,7 +1,7 @@
 import path from 'path';
 import { UP_ERROR, UP_INFO } from '../../consts/errorMessages.js';
 import { printErrorToConsole } from '../../utils/printErrorToConsole.js';
-import printCurrentWorkingDir from '../../utils/printCurrentWorkingDir.js';
+import {printCurrentWorkingDir} from '../../utils/printCurrentWorkingDir.js';
 import { ROOT_FOLDER } from '../../consts/rootDirectory.js';
 
 export function handleMoveUp() {

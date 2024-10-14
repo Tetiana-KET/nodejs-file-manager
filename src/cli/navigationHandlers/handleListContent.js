@@ -1,6 +1,6 @@
 import { readdir } from 'node:fs/promises';
 import { printErrorToConsole } from '../../utils/printErrorToConsole.js';
-import printCurrentWorkingDir from '../../utils/printCurrentWorkingDir.js';
+import {printCurrentWorkingDir} from '../../utils/printCurrentWorkingDir.js';
 
 export async function handleListContent() {
 	const curDir = process.cwd();

@@ -2,7 +2,7 @@ import readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 
 import getUserName from './utils/getUserName.js';
-import printCurrentWorkingDir from './utils/printCurrentWorkingDir.js';
+import {printCurrentWorkingDir} from './utils/printCurrentWorkingDir.js';
 import showUserGreeting from './utils/showUserGreeting.js';
 import handleInput from './cli/handleInput.js';
 import { COLORS } from './consts/colors.js';
