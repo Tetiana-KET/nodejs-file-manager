@@ -10,9 +10,9 @@ export function printUserMachineCpuData() {
 		Clock_rate: `${cpu.speed / 1000} GHz`,
 	}));
 
-	console.table(cpuData);
 	console.log(
 		`${COLORS.success}Total number of CPUs: ${cpus.length}\n${COLORS.reset}`
 	);
+	console.table(cpuData);
 	printCurrentWorkingDir();
 }
