@@ -15,6 +15,6 @@ export async function readFile(path) {
 		printCurrentWorkingDir();
 	});
 	readableStream.on('error', error => {
-		printErrorToConsole(error);
+		printErrorToConsole(`Operation failed! ${error.message}`);
 	});
 }

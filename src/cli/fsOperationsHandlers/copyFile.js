@@ -36,7 +36,7 @@ export async function copyFile(args) {
 		readStream.on('error', err => {
 			printErrorToConsole(`Error reading file: ${err.message}`);
 		});
-	} catch (err) {
-		printErrorToConsole(err);
+	} catch (error) {
+		printErrorToConsole(`Operation failed! ${error.message}`);
 	}
 }
