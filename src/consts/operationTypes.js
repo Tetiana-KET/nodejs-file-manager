@@ -16,3 +16,8 @@ export const FS_OPERATIONS = {
 	mv: 'mv',
 	rm: 'rm',
 };
+
+export const COMPRESS_OPERATIONS = {
+	compress: 'compress',
+	decompress: 'decompress',
+};
