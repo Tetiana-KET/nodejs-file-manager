@@ -2,6 +2,7 @@ import { WRONG_COMMAND } from '../../consts/errorMessages.js';
 import { printErrorToConsole } from '../../utils/printErrorToConsole.js';
 import { copyFile } from './copyFile.js';
 import { createFile } from './createEmptyFile.js';
+import { moveFile } from './moveFile.js';
 import { readFile } from './readFile.js';
 import { renameFile } from './renameFile.js';
 
@@ -21,6 +22,7 @@ export default async function fsOperationsHandler(operation, args) {
 				await copyFile(args);
 				break;
 			case 'mv':
+				await moveFile(args);
 				break;
 			case 'rm':
 				break;
