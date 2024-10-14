@@ -2,6 +2,8 @@ export const EXIT = '.exit';
 
 export const HASH_OPERATION = 'hash';
 
+export const OS_OPERATION = 'os';
+
 export const NAVIGATION = {
 	up: 'up',
 	cd: 'cd',
