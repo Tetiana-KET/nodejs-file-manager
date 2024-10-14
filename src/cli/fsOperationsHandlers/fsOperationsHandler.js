@@ -2,6 +2,7 @@ import { WRONG_COMMAND } from '../../consts/errorMessages.js';
 import { printErrorToConsole } from '../../utils/printErrorToConsole.js';
 import { createFile } from './createEmptyFile.js';
 import { readFile } from './readFile.js';
+import { renameFile } from './renameFile.js';
 
 export default async function fsOperationsHandler(operation, args) {
 	try {
@@ -12,14 +13,15 @@ export default async function fsOperationsHandler(operation, args) {
 			case 'add':
 				await createFile(args[0]);
 				break;
-			// case 'rn':
-			// 	break;
-			// case 'cp':
-			// 	break;
-			// case 'mv':
-			// 	break;
-			// case 'rm':
-			// 	break;
+			case 'rn':
+				await renameFile(args);
+				break;
+			case 'cp':
+				break;
+			case 'mv':
+				break;
+			case 'rm':
+				break;
 			default:
 				printErrorToConsole(WRONG_COMMAND);
 		}
