@@ -1,1 +1,1 @@
-Delete file, use ```rm src/files/fileToDelete.txt```
+Delete file, use **```rm src/files/fileToDelete.txt```**
